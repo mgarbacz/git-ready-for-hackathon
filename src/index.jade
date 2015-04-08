@@ -17,7 +17,25 @@ html
         h1 Git: Ready for Hackathon
         h3
           a(href='https://twitter.com/michgarbacz') @michgarbacz
-        img.avatar.avatar--small(src='https://secure.gravatar.com/avatar/c1a1cb91d6709234ff0fed46b166e446?size=70px')
+        img.avatar(src='https://secure.gravatar.com/avatar/c1a1cb91d6709234ff0fed46b166e446?size=70px')
+
+      section(data-bespoke-hash='git-init')
+        h2 Git init
+        pre
+          code.language-bash.
+            git init
+
+      section(data-bespoke-hash='git-add')
+        h2 Git add
+        pre
+          code.language-bash.
+            git add
+
+      section(data-bespoke-hash='git-commit')
+        h2 Git commit
+        pre
+          code.language-bash.
+            git commit -m 'Git is the best'
 
       section
         h2 Keyboard Interaction
@@ -59,18 +77,5 @@ html
       section.emphatic-text(data-bespoke-backdrop='emphatic')
         h2 Emphatic Slide!
         h3 Powered by <a href="https://github.com/markdalgleish/bespoke-backdrop">bespoke-backdrop</a>
-
-      section
-        h2.bullet Just the beginning...
-        br
-        ul
-          li Edit <a href="http://jade-lang.com/">Jade</a> markup in <em>'src/index.jade'</em>
-          li Edit <a href="http://learnboost.github.io/stylus/">Stylus</a> styles in <em>'src/styles/main.styl'</em>
-          li Edit JavaScript in <em>'src/scripts/main.js'</em>
-        br
-        ul
-          li
-            strong Enjoy! :)
-            a(href='http://twitter.com/markdalgleish')  -@markdalgleish
 
     script(src='build/build.js')
