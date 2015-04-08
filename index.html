@@ -105,8 +105,9 @@ echo "## bugfree-unicorn" &gt; README.md
       <section>
         <h2>Git team workflow</h2>
         <ul>
-          <li class="bullet">Create a <span class="triadic-2-text">branch</span></li>
-          <li class="bullet">Make commits on this branch in history</li>
+          <li class="bullet">Working in separate <span class="triadic-2-text">branches</span> of history</li>
+          <li class="bullet">Create a branch</li>
+          <li class="bullet">Make commits on the new branch</li>
           <li class="bullet">Merge the changes back to the master branch</li>
         </ul>
       </section>
@@ -117,8 +118,11 @@ git checkout add-list
 </code></pre>
       </section>
       <section data-bespoke-hash="git-commit-all">
-        <h2>Commit all modified files</h2>
-        <pre><code class="language-bash">git commit -am 'Add list item'
+        <h2>Make some changes and commit them</h2>
+        <pre><code class="language-bash"># Add a list item to your README.md
+- Hi I am a list item
+- I am another list item</code></pre>
+        <pre><code class="language-bash">git commit -am 'Add list items'
 </code></pre>
       </section>
       <section data-bespoke-hash="git-log">
@@ -127,7 +131,7 @@ git checkout add-list
 </code></pre>
       </section>
       <section data-bespoke-hash="git-checkout-master">
-        <h2>Make a fix on master</h2>
+        <h2>Oh no! There's a bug on master</h2>
         <pre><code class="language-bash">git checkout master
 
 # Change `##` to `#`
@@ -156,16 +160,14 @@ git merge add-list
         <pre><code class="language-bash">git branch -d all-list
 </code></pre>
       </section>
-      <section data-bespoke-hash="index"></section>
-      <section data-bespoke-hash="glossary">
-        <h2>Glossary</h2>
-      </section>
       <section data-bespoke-hash="resources">
         <h2>Git Resources</h2>
         <ul>
-          <li>Official Git site http://git-scm.com/</li>
-          <li>Try Git http://try.github.com/</li>
-          <li>Github help https://help.github.com/</li>
+          <li><a href="http://git-scm.com/">Official Git site</a></li>
+          <li><a href="https://help.github.com/">Github help</a></li>
+          <li><a href="http://try.github.com/">Try Git</a></li>
+          <li><a href="http://stackoverflow.com">Stackoverflow</a></li>
+          <li><a href="https://google.com">Google</a></li>
         </ul>
       </section>
     </article>
