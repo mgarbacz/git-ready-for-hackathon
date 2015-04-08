@@ -124,8 +124,9 @@ html
       section
         h2 Git team workflow
         ul
-          li.bullet Create a <span class="triadic-2-text">branch</span>
-          li.bullet Make commits on this branch in history
+          li.bullet Working in separate <span class="triadic-2-text">branches</span> of history
+          li.bullet Create a branch
+          li.bullet Make commits on the new branch
           li.bullet Merge the changes back to the master branch
 
       section(data-bespoke-hash='git-branch')
@@ -136,10 +137,15 @@ html
             git checkout add-list
 
       section(data-bespoke-hash='git-commit-all')
-        h2 Commit all modified files
+        h2 Make some changes and commit them
         pre
           code.language-bash.
-            git commit -am 'Add list item'
+            # Add a list item to your README.md
+            - Hi I am a list item
+            - I am another list item
+        pre
+          code.language-bash.
+            git commit -am 'Add list items'
 
       section(data-bespoke-hash='git-log')
         h2 Let's look at our commit history
@@ -148,7 +154,7 @@ html
             git log
 
       section(data-bespoke-hash='git-checkout-master')
-        h2 Make a fix on master
+        h2 Oh no! There's a bug on master
         pre
           code.language-bash.
             git checkout master
