@@ -8,6 +8,7 @@ var bespoke = require('bespoke'),
   scale = require('bespoke-scale'),
   hash = require('bespoke-hash'),
   progress = require('bespoke-progress');
+  state = require('bespoke-state');
 
 // Bespoke.js
 bespoke.from('article', [
@@ -18,7 +19,8 @@ bespoke.from('article', [
   backdrop(),
   scale(),
   hash(),
-  progress()
+  progress(),
+  state()
 ]);
 
 // Prism syntax highlighting
@@ -27,4 +29,5 @@ bespoke.from('article', [
 require('prism');
 require('prism/components/prism-git')
 require('prism/components/prism-bash')
+
 
