@@ -7,8 +7,11 @@
   right: 0
   bottom: 0
   overflow: hidden
-  transition: all 0.3s ease
+  transition: all 0.3s ease, background 0.6s ease
   perspective: 600px
+  &.primary
+    background: primary
+    color: #333333
 
 .bespoke-scale-parent
   position: absolute
@@ -90,7 +93,7 @@
   transform: translateX(slide_transition_nudge_x) translateX(slide_width / 2) rotateY(slide_transition_rotate_y) translateX(slide_width / 2)
 
 .emphatic
-  background: #222
+  background: #222222
 
 .emphatic-text
-  color: white
+  color: #FFFFFF
