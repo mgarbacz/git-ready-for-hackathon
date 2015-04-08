@@ -1,0 +1,7 @@
+{
+  "name": "presentation-git-ready-for-hackathon",
+  "version": "0.0.0",
+  "dependencies": {
+    "prism": "gh-pages"
+  }
+}
