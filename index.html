@@ -11,22 +11,162 @@
     <article>
       <section>
         <h1>Git: Ready for Hackathon</h1>
-        <h3><a href="https://twitter.com/michgarbacz">@michgarbacz</a></h3><img src="https://secure.gravatar.com/avatar/c1a1cb91d6709234ff0fed46b166e446?size=70px" class="avatar">
+        <h3><a href="https://twitter.com/michal_garbacz">@michal_garbacz</a></h3><img src="https://secure.gravatar.com/avatar/c1a1cb91d6709234ff0fed46b166e446?size=70px" class="avatar"><br>
+        <p id="secret">"Me-how"</p>
+      </section>
+      <section data-bespoke-hash="short-url">
+        <h2>Short link to this preso: <a href="http://bit.ly/redbirdhacksgit">http://bit.ly/redbirdhacksgit</a></h2>
+      </section>
+      <section>
+        <h2>Version control</h2>
+        <ul>
+          <li class="bullet">Keeps track of the changes to your code</li>
+          <li class="bullet">Allows you to go back to any point in <span class="triadic-2-text">history</span></li>
+          <li class="bullet">Allows you to bundle code changes together into <span class="triadic-2-text">commits</span></li>
+          <li class="bullet">Allows you to <span class="triadic-2-text">merge</span> history</li>
+        </ul>
+      </section>
+      <section data-bespoke-state="primary">
+        <h2>Git is a version control system</h2>
+      </section>
+      <section data-bespoke-hash="workshop-setup">
+        <h2>Workshop Setup
+          <ul>
+            <li><span class="triadic-1-text">Git:</span> Mac &amp; Linux have it, Windows should get <a href="https://msysgit.github.io/">msysGit</a></li>
+            <li><span class="triadic-1-text">Text Editor:</span> Use your favorite or get <a href="http://notepad-plus-plus.org/">Notepad++</a></li>
+            <li><span class="triadic-1-text">Remote:</span> Sign up for <a href="https://github.com/">Github</a></li>
+          </ul>
+        </h2>
+      </section>
+      <section data-bespoke-hash="github-ssh-key">
+        <h2><a href="https://help.github.com/articles/generating-ssh-keys/">Github generating SSH key</a></h2>
+        <h3>Skip step 3</h3>
+      </section>
+      <section data-bespoke-hash="git-global">
+        <h2>Git global setup</h2>
+        <pre><code class="language-bash">git config --global user.email "you@example.com"
+git config --global user.name "Your Name"
+
+# If Windows
+git config --global core.safecrlf false
+</code></pre>
+      </section>
+      <section data-bespoke-hash="project-directory">
+        <h2>Setup a project directory</h2>
+        <pre><code class="language-bash">mkdir bugfree-unicorn
+cd bugfree-unicorn
+</code></pre>
       </section>
       <section data-bespoke-hash="git-init">
-        <h2>Git init</h2>
+        <h2>Initialize a repository</h2>
         <pre><code class="language-bash">git init
 </code></pre>
       </section>
+      <section data-bespoke-hash="git-status">
+        <h2>Check the status of the repository</h2>
+        <pre><code class="language-bash">git status
+</code></pre>
+      </section>
+      <section data-bespoke-hash="create-file">
+        <h2>Create a README.md file</h2>
+        <pre><code class="language-bash"># Windows
+C:/Users/&lt;user&gt;/bugfree-unicorn</code></pre>
+        <pre><code class="language-bash"># Mac/Linux
+/users/&lt;user&gt;/bugfree-unicorn</code></pre>
+        <pre><code class="language-bash"># or with a command
+touch README.md
+echo "## bugfree-unicorn" &gt; README.md
+</code></pre>
+      </section>
       <section data-bespoke-hash="git-add">
-        <h2>Git add</h2>
-        <pre><code class="language-bash">git add
+        <h2>Tell git to track the README.md file</h2>
+        <pre><code class="language-bash">git add README.md
 </code></pre>
       </section>
       <section data-bespoke-hash="git-commit">
-        <h2>Git commit</h2>
-        <pre><code class="language-bash">git commit -m 'Git is the best'
+        <h2>Bundle this change into a commit</h2>
+        <pre><code class="language-bash">git commit -m 'Add project name to README'
 </code></pre>
+      </section>
+      <section data-bespoke-hash="github-create-project">
+        <h2><a href="https://github.com/new">Create project on Github</a></h2>
+      </section>
+      <section data-bespoke-hash="git-remote">
+        <h2>Git remotes</h2>
+        <pre><code class="language-bash">git remote add origin &lt;github-url&gt;
+</code></pre>
+      </section>
+      <section data-bespoke-hash="git-push">
+        <h2>Push your pending commit(s) to remote</h2>
+        <pre><code class="language-bash">git push
+</code></pre>
+      </section>
+      <section><img src="http://markdalgleish.github.io/presentation-build-wars-gulp-vs-grunt/images/gif/bubbles.gif" class="bubbles"></section>
+      <section>
+        <h2>Git team workflow</h2>
+        <ul>
+          <li class="bullet">Create a <span class="triadic-2-text">branch</span></li>
+          <li class="bullet">Make commits on this branch in history</li>
+          <li class="bullet">Merge the changes back to the master branch</li>
+        </ul>
+      </section>
+      <section data-bespoke-hash="git-branch">
+        <h2>Create a branch</h2>
+        <pre><code class="language-bash">git branch add-list
+git checkout add-list
+</code></pre>
+      </section>
+      <section data-bespoke-hash="git-commit-all">
+        <h2>Commit all modified files</h2>
+        <pre><code class="language-bash">git commit -am 'Add list item'
+</code></pre>
+      </section>
+      <section data-bespoke-hash="git-log">
+        <h2>Let's look at our commit history</h2>
+        <pre><code class="language-bash">git log
+</code></pre>
+      </section>
+      <section data-bespoke-hash="git-checkout-master">
+        <h2>Make a fix on master</h2>
+        <pre><code class="language-bash">git checkout master
+
+# Change `##` to `#`
+
+git commit -am 'Fix header'
+
+# Go back to working branch
+
+git checkout add-list
+</code></pre>
+      </section>
+      <section data-bespoke-hash="git-rebase">
+        <h2>Let's squash some of those commits</h2>
+        <pre><code class="language-bash">git rebase -i &lt;sha&gt;
+</code></pre>
+      </section>
+      <section data-bespoke-hash="git-merge">
+        <h2>Merge your branch into master</h2>
+        <pre><code class="language-bash">git checkout master
+
+git merge add-list
+</code></pre>
+      </section>
+      <section data-bespoke-hash="git-branch-delete">
+        <h2>Delete the old branch</h2>
+        <pre><code class="language-bash">git branch -d all-list
+</code></pre>
+      </section>
+      <section data-bespoke-hash="index"></section>
+      <section data-bespoke-hash="glossary">
+        <h2>Glossary</h2>
+      </section>
+      <section data-bespoke-hash="resources">
+        <h2>Git Resources</h2>
+        <ul>
+          <li>Official Git site http://git-scm.com/</li>
+          <li>Try Git http://try.github.com/</li>
+          <li>Github help https://help.github.com/</li>
+        </ul>
       </section>
     </article>
     <script src="build/build.js"></script>
