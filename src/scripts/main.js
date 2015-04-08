@@ -32,6 +32,10 @@ require('prism/components/prism-bash')
 
 document.addEventListener('keydown', function(e) {
   if (e.which == 75) {
-    document.getElementById('secret').style.opacity = 1
+    var secret = document.getElementById('secret');
+    if (secret.style.opacity == 1)
+        secret.style.opacity = 0;
+    else
+        secret.style.opacity = 1;
   }
 });
