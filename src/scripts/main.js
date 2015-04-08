@@ -30,4 +30,8 @@ require('prism');
 require('prism/components/prism-git')
 require('prism/components/prism-bash')
 
-
+document.addEventListener('keydown', function(e) {
+  if (e.which == 75) {
+    document.getElementById('secret').style.opacity = 1
+  }
+});
