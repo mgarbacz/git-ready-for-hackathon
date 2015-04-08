@@ -9,8 +9,73 @@
 @import 'prism/themes/prism-okaidia.css'
 // Check out "bower_components/prism/themes/" for available themes
 
+@import '_mixins'
 @import '_variables'
 @import '_bespoke'
 
+*
+  box-sizing: border-box
+
 body
+  background: #333333
   font-family: open sans, helvetica, arial, sans-serif
+  font-weight: 300
+  font-size: 18px
+  color: #FAFAFA
+
+h1
+  font-size: 72px
+  font-weight: 600
+  line-height: 82px
+  letter-spacing: -2px
+  margin-bottom: 16px
+
+h2
+  font-size: 42px
+  font-weight: 300
+  letter-spacing: -1px
+  margin-bottom: 8px
+
+h3
+  font-size: 25px
+  font-weight: 300
+  margin-bottom: 24px
+  color: #EAEAEA
+
+ul
+  list-style: none
+  padding: 0
+
+li
+  margin-bottom: 12px
+
+p
+  margin: 0 100px 12px
+  line-height: 22px
+
+blockquote
+  max-width: 75%
+
+small
+  font-size: 50%
+
+a
+  color: primary
+  text-decoration: none
+  &:visited
+    color: primary
+
+.primary-text
+  color: primary
+
+.complementary-text
+  color: complementary
+
+.triadic-1-text
+  color: triadic_1
+
+.triadic-2-text
+  color: triadic_2
+
+img.avatar
+  border-radius: 100%
